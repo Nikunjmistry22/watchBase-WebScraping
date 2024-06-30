@@ -40,6 +40,7 @@ for t in texts:
     elif t[0].isnumeric(): urls.append(t)
 print(urls)
 time.sleep(10)
+main_json=[]
 # Second part of the code
 for url in urls:
     try:
@@ -117,7 +118,6 @@ for url in urls:
         labels = data['labels'] if 'labels' in data else []
         prices = data['datasets'][0]['data'] if 'datasets' in data and data['datasets'] else []
 
-        main_json=[]
         # Constructing the watch_info dictionary
         watch_info = {
             "Brand": brand,
