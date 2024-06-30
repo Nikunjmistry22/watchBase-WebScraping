@@ -144,6 +144,8 @@ for url in urls:
         }
         print(watch_info)
         main_json.append(watch_info)
+        #There is rate limiter thats why having a gap makes sense and to avoid rate limiters use proxies servers and add like this
+        # request.get(url=url,headers=header,proxies=proxy)
         time.sleep(5)
     except Exception as e:
         print(f"Error processing {url}: {e}")
